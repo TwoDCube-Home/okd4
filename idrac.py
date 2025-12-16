@@ -61,8 +61,7 @@ def main():
 
     args = cmd.parse_args()
 
-    loop = asyncio.get_event_loop()
-    ret = loop.run_until_complete(run(args))
+    ret = asyncio.run(run(args))
 
     exit(ret)
 
